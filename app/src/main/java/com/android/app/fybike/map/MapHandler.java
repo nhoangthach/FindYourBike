@@ -392,25 +392,25 @@ public class MapHandler {
                 HashMap<String, String> hmPlace = list.get(i);
 
                 // Getting latitude of the place
-//                double lat = Double.parseDouble(hmPlace.get("lat"));
+                double lat = Double.parseDouble(hmPlace.get("lat"));
 
                 // Getting longitude of the place
-//                double lng = Double.parseDouble(hmPlace.get("lng"));
+                double lng = Double.parseDouble(hmPlace.get("lng"));
 
                 // Getting name
-                String name = hmPlace.get("place_name");
+//                String name = hmPlace.get("place_name");
 
                 // Getting vicinity
-                String vicinity = hmPlace.get("vicinity");
+//                String vicinity = hmPlace.get("vicinity");
 
-//                LatLng latLng = new LatLng(lat, lng);
+                LatLng latLng = new LatLng(lat, lng);
 
                 // Setting the position for the marker
-//                markerOptions.position(latLng);
+                markerOptions.position(latLng);
 
                 // Setting the title for the marker.
                 //This will be displayed on taping the marker
-                markerOptions.title(name + " : " + vicinity);
+//                markerOptions.title(name + " : " + vicinity);
 
                 markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
 

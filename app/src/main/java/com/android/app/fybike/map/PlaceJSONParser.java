@@ -207,21 +207,21 @@ public class PlaceJSONParser {
 			// Extracting Place name, if available
 
             id = jPlace.getString("_id");
-			if(!jPlace.isNull("title")){
+			/*if(!jPlace.isNull("title")){
                 title = jPlace.getString("title");
 			}
 
 			// Extracting Place Vicinity, if available
 			if(!jPlace.isNull("icon")){
                 icon = jPlace.getString("icon");
-			}
+			}*/
 
 			latitude = jPlace.getJSONArray("location").getString(1);
-			longitude = jPlace.getJSONArray("location").getString(2);
+			longitude = jPlace.getJSONArray("location").getString(0);
 
 
-			place.put("title", title);
-			place.put("icon", icon);
+			/*place.put("title", title);
+			place.put("icon", icon);*/
 			place.put("lat", latitude);
 			place.put("lng", longitude);
 

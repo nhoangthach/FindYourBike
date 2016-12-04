@@ -99,7 +99,7 @@ public class MainMapFragment extends Fragment implements OnMapReadyCallback {
 
         MapHandler mapHandler = new MapHandler(mLatitude,mLongitude, MapType.CAR_REPAIR.toString(),googleMap);
         mapHandler.showNearPlaces();
-        // mapHandler.getLocalLocation();
+        mapHandler.getLocalLocation();
 
     }
 
