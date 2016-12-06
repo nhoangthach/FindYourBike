@@ -20,6 +20,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
+
 public class MainMapFragment extends Fragment implements OnMapReadyCallback {
 
     private SupportMapFragment m_map;
@@ -97,9 +98,12 @@ public class MainMapFragment extends Fragment implements OnMapReadyCallback {
             //show something
         }
 
+        mMap.clear();
         MapHandler mapHandler = new MapHandler(mLatitude,mLongitude, MapType.CAR_REPAIR.toString(),googleMap);
-        mapHandler.showNearPlaces();
-        mapHandler.getLocalLocation();
+        mapHandler.showQuerryPlaces();
+//        mapHandler.showNearPlaces();
+//        mapHandler.getLocalLocation();
+
 
     }
 
